@@ -75,6 +75,12 @@ a {
   gap: 28px;
 }
 
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 .nav-links a {
   text-decoration: none;
   font-size: 0.92rem;
@@ -83,6 +89,37 @@ a {
 
 .nav-links a:hover {
   color: #111;
+}
+
+.language-toggle {
+  display: flex;
+  padding: 2px;
+  border: 1px solid #d7d7d7;
+  border-radius: 6px;
+  background: white;
+}
+
+.language-toggle button {
+  min-width: 34px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 4px;
+  color: #666;
+  background: transparent;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.language-toggle button.active {
+  color: white;
+  background: var(--accent);
+}
+
+.language-toggle button:focus-visible {
+  outline: 3px solid #9bc9c4;
+  outline-offset: 2px;
 }
 
 .hero {
