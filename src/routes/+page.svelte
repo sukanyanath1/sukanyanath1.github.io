@@ -4,6 +4,8 @@
   const scholar =
     'https://scholar.google.com/citations?user=WWjzvnoAAAAJ&hl=en';
 
+  const linkedin = 'https://www.linkedin.com/in/sukanyanath/';
+
   const presentations = [
     {
       title: 'Teaching presentation 1',
@@ -115,7 +117,7 @@
       ]
     },
     {
-      title: 'AI Research Observability',
+      title: 'Autonomous Research Systems',
       description:
         'Research on independently verifiable evidence for detecting epistemic degradation in autonomous research systems, including failure taxonomies, evaluation design and audit-oriented observability.',
       role:
@@ -128,9 +130,10 @@
       ],
       links: [
         {
-          label: 'Publications',
-          url: scholar
+          label: 'Presentation',
+          url: '/presentations/Autonomous%20Research%20Systems%20KPM%20and%20Med%20Libary.pdf'
         }
+        
       ]
     }
   ];
@@ -188,19 +191,23 @@
   const publications = [
     {
       title:
-        'Using Natural Language Processing to Find Indications for Burnout with Text Classification: From Online Data to Real-World Data'
+        'Using Natural Language Processing to Find Indications for Burnout with Text Classification: From Online Data to Real-World Data',
+      url: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WWjzvnoAAAAJ&authuser=1&citation_for_view=WWjzvnoAAAAJ:qjMakFHDy7sC'
     },
     {
       title:
-        'BurnoutWords — Detecting Burnout for a Clinical Setting'
+        'Style change detection using Siamese neural networks',
+      url:'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WWjzvnoAAAAJ&authuser=1&citation_for_view=WWjzvnoAAAAJ:u-x6o8ySG0sC'
     },
     {
       title:
-        'Style Change Detection Using Siamese Neural Networks'
+        'Burnoutwords-detecting burnout for a clinical setting',
+        url: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WWjzvnoAAAAJ&authuser=1&citation_for_view=WWjzvnoAAAAJ:d1gkVwhDpl0C'
     },
     {
       title:
-        'Style Change Detection by Threshold-Based and Window-Merge Clustering Methods'
+        'Analysis of process data to advance computer-based assessments in multilingual contexts',
+        url: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WWjzvnoAAAAJ&authuser=1&citation_for_view=WWjzvnoAAAAJ:Tyk-4Ss8FVUC'
     }
   ];
 </script>
@@ -214,6 +221,7 @@
     <div class="nav-links">
       <a href="#work">Work</a>
       <a href="#engineering">Engineering</a>
+      <a href="#advisory">Independent Advisory</a>
       <a href="#research">Research</a>
       <a href="#about">About</a>
     </div>
@@ -252,6 +260,15 @@
         rel="noreferrer"
       >
         Google Scholar
+      </a>
+
+      <a
+        class="button linkedin"
+        href={linkedin}
+        target="_blank"
+        rel="noreferrer"
+      >
+        LinkedIn
       </a>
 
       <!-- Add when ready:
@@ -337,9 +354,62 @@
     </div>
   </section>
 
-  <section id="research" class="section container">
+  <section id="advisory" class="section container">
     <div class="section-heading">
       <span>03</span>
+      <h2>Independent Advisory</h2>
+    </div>
+
+    <div class="advisory-layout">
+      <div>
+        <p class="large-copy">
+          I am available for selected independent advisory engagements in
+          Generative AI, NLP and production AI systems.
+        </p>
+
+        <p class="advisory-note">
+          Engagements are considered on a limited basis and subject to
+          compatibility with my existing professional responsibilities.
+        </p>
+      </div>
+
+      <div class="advisory-details">
+        <h3>Typical engagements</h3>
+
+        <ul>
+          <li>AI architecture reviews for RAG, agentic and cloud-based AI systems</li>
+          <li>Second opinions on AI system design, harnesses and technology choices</li>
+          <li>AI and Agentic Workflow Evaluations and observability reviews</li>
+          <li>Co Supervision of master's theses</li>
+          <li>Guidance on how to convert your research problem to a concrete project</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="advisory-contact">
+      <div>
+        <h3>Get in touch</h3>
+        <p>
+          If you would like an independent technical perspective on an AI
+          system or project, feel free to contact me.
+        </p>
+      </div>
+
+      <div class="advisory-actions">
+        <a class="button primary" href="mailto:sukanyanath6@gmail.com">Email me</a>
+        <a
+          class="button secondary"
+          href="https://www.dsl.unibe.ch/about/people_metadata/dr_nath_sukanya/"
+          target="_blank"
+          rel="noreferrer"
+        >University profile ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="research" class="section container">
+    <div class="section-heading">
+      <span>04</span>
       <h2>Research</h2>
     </div>
 
@@ -367,7 +437,18 @@
 
         {#each publications as publication}
           <article class="publication">
-            <p>{publication.title}</p>
+            <p>
+              {#if publication.url}
+                <a
+                  class="text-link"
+                  href={publication.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >{publication.title} ↗</a>
+              {:else}
+                {publication.title}
+              {/if}
+            </p>
           </article>
         {/each}
       </div>
@@ -376,7 +457,7 @@
 
   <section class="section container">
     <div class="section-heading">
-      <span>04</span>
+      <span>05</span>
       <h2>Teaching & Training</h2>
     </div>
 
@@ -419,7 +500,7 @@
 
   <section id="about" class="section container">
     <div class="section-heading">
-      <span>05</span>
+      <span>06</span>
       <h2>About</h2>
     </div>
 
@@ -472,6 +553,10 @@
       <a href={scholar} target="_blank" rel="noreferrer">
         Scholar
       </a>
+      <a href={linkedin} target="_blank" rel="noreferrer">
+        LinkedIn
+      </a>
     </div>
+
   </footer>
 </main>

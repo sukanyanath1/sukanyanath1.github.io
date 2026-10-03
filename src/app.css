@@ -162,6 +162,12 @@ a {
   background: var(--warm-soft);
 }
 
+.button.linkedin {
+  color: white;
+  background: #0a66c2;
+  border: 1px solid #0a66c2;
+}
+
 .button:hover {
   transform: translateY(-1px);
 }
@@ -366,6 +372,80 @@ a {
   color: #555;
 }
 
+.advisory-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 72px;
+}
+
+.advisory-note {
+  max-width: 520px;
+  margin-top: 28px;
+
+  color: #666;
+  line-height: 1.65;
+}
+
+.advisory-details h3,
+.advisory-contact h3 {
+  margin-top: 0;
+  color: var(--accent);
+  font-size: 1.15rem;
+}
+
+.advisory-details ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advisory-details li {
+  padding: 13px 0 13px 22px;
+  position: relative;
+
+  color: #444;
+  line-height: 1.5;
+  border-bottom: 1px solid #dce7e5;
+}
+
+.advisory-details li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 21px;
+  left: 0;
+
+  background: var(--warm-accent);
+  border-radius: 50%;
+}
+
+.advisory-contact {
+  margin-top: 52px;
+  padding: 28px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+
+  background: var(--warm-soft);
+  border-left: 4px solid var(--warm-accent);
+}
+
+.advisory-contact p {
+  max-width: 620px;
+  margin-bottom: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.advisory-actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 10px;
+}
+
 .research-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -499,6 +579,20 @@ a {
     grid-template-columns: 1fr;
 
     gap: 50px;
+  }
+
+  .advisory-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .advisory-contact {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .advisory-actions {
+    flex-wrap: wrap;
   }
 
   .footer {
