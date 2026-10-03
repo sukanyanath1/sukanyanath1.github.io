@@ -185,6 +185,21 @@
       ]
     },
     {
+      title: 'Model Development',
+      items: [
+        'Supervised and unsupervised learning',
+        'Transformer fine-tuning',
+        'PEFT / LoRA / QLoRA',
+        'Embedding models',
+        'Text classification',
+        'Siamese networks',
+        'Feature engineering',
+        'Hyperparameter tuning',
+        'Experiment tracking',
+        'Model evaluation'
+      ]
+    },
+    {
       title: 'Cloud & Platform',
       items: [
         'Azure',
@@ -321,6 +336,21 @@
         items: [
           'Python', 'Natural Language Processing', 'Transformers',
           'Maschinelles Lernen', 'Information Retrieval'
+        ]
+      },
+      {
+        title: 'Modellentwicklung',
+        items: [
+          'Überwachtes und unüberwachtes Lernen',
+          'Transformer Fine-Tuning',
+          'PEFT / LoRA / QLoRA',
+          'Embedding-Modelle',
+          'Textklassifikation',
+          'Siamese-Netzwerke',
+          'Feature Engineering',
+          'Hyperparameter-Tuning',
+          'Experiment Tracking',
+          'Modellevaluation'
         ]
       },
       {
