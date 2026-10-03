@@ -257,7 +257,7 @@
   </nav>
 
   <section class="hero container">
-    <div class="eyebrow">AI ENGINEERING · PhD (NLP) · GENERATIVE AI</div>
+    <div class="eyebrow">AI/ ML Engineer · PhD · NLP/ GENERATIVE AI · DATA SCIENCE</div>
 
     <h1>Sukanya Nath</h1>
 
