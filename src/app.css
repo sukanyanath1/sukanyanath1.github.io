@@ -168,6 +168,12 @@ a {
   border: 1px solid #0a66c2;
 }
 
+.button.email {
+  color: white;
+  background: #8b2450;
+  border: 1px solid #8b2450;
+}
+
 .button:hover {
   transform: translateY(-1px);
 }
@@ -511,6 +517,41 @@ a {
   line-height: 1.5;
 }
 
+.education-section {
+  padding: 42px 0 54px;
+  border-top: 1px solid #ddd;
+}
+
+.education-section .section-heading {
+  margin-bottom: 24px;
+}
+
+.education-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.education-list article {
+  padding-left: 14px;
+  border-left: 2px solid var(--accent);
+}
+
+.education-list h3,
+.education-list p {
+  margin: 0;
+}
+
+.education-list h3 {
+  font-size: 1rem;
+}
+
+.education-list p {
+  margin-top: 6px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
 .about {
   max-width: 800px;
 }
@@ -573,6 +614,11 @@ a {
 
   .skill-grid {
     grid-template-columns: 1fr;
+  }
+
+  .education-list {
+    grid-template-columns: 1fr;
+    gap: 22px;
   }
 
   .research-layout {

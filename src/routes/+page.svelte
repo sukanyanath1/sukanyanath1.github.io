@@ -6,15 +6,23 @@
 
   const linkedin = 'https://www.linkedin.com/in/sukanyanath/';
 
+  const email = 'mailto:sukanyanath6@gmail.com';
+
   const presentations = [
     {
-      title: 'Teaching presentation 1',
+      title: 'Agentic Chatbot Architecture',
+      previewUrl:
+        '/presentations/Informationskiosk_Seminar_published_slides.pdf#page=1&view=FitH&toolbar=0',
+      url: '/presentations/Informationskiosk_Seminar_published_slides.pdf'
+    },
+    {
+      title: 'Basics of Generative AI - Under the Hood',
       previewUrl:
         'https://docs.google.com/presentation/d/1hrMPllIGBMJaxSiCayg3VY4-FPf7IhHB65coL120kPQ/embed?start=false&loop=false&delayms=3000',
       url: 'https://docs.google.com/presentation/d/1hrMPllIGBMJaxSiCayg3VY4-FPf7IhHB65coL120kPQ/edit?usp=sharing'
     },
     {
-      title: 'Teaching presentation 2',
+      title: 'Web Scraping',
       previewUrl:
         'https://docs.google.com/presentation/d/10wctaEvJ0aplVyQNwYEFFI5lSGPgPRJqgNdrUfWVmCs/embed?start=false&loop=false&delayms=3000',
       url: 'https://docs.google.com/presentation/d/10wctaEvJ0aplVyQNwYEFFI5lSGPgPRJqgNdrUfWVmCs/edit?usp=sharing'
@@ -26,10 +34,10 @@
       url: '/presentations/AI%20Anwendungen%20im%20administrativen%20Bereich.pdf'
     },
     {
-      title: 'InformationsKiosk Seminar',
+      title: 'NLP and Digital Traces',
       previewUrl:
-        '/presentations/Informationskiosk_Seminar_published_slides.pdf#page=1&view=FitH&toolbar=0',
-      url: '/presentations/Informationskiosk_Seminar_published_slides.pdf'
+        '/presentations/01_Introduction%20to%20NLP.pdf#page=1&view=FitH&toolbar=0',
+      url: '/presentations/01_Introduction%20to%20NLP.pdf'
     }
   ];
 
@@ -188,6 +196,27 @@
     }
   ];
 
+  const education = [
+    {
+      degree: "Bachelor's degree",
+      field: 'Computer Science and Engineering',
+      institution: 'NIT Silchar, India',
+      year: '2009 - 2013',
+    },
+    {
+      degree: "Master's degree",
+      field: 'Computer Science (Specialization in Data Science)',
+      institution: 'University of Bern',
+      year: '2016 - 2018',
+    },
+    {
+      degree: 'PhD',
+      field: 'Computer Science (NLP/ Computational Linguistics)',
+      institution: 'University of Neuchâtel',
+      year: '2018 - 2021',
+    }
+  ];
+
   const publications = [
     {
       title:
@@ -228,7 +257,7 @@
   </nav>
 
   <section class="hero container">
-    <div class="eyebrow">AI ENGINEERING · NLP · GENERATIVE AI</div>
+    <div class="eyebrow">AI ENGINEERING · PhD (NLP) · GENERATIVE AI</div>
 
     <h1>Sukanya Nath</h1>
 
@@ -269,6 +298,10 @@
         rel="noreferrer"
       >
         LinkedIn
+      </a>
+
+      <a class="button email" href={email}>
+        Email
       </a>
 
       <!-- Add when ready:
@@ -378,6 +411,11 @@
 
         <ul>
           <li>AI architecture reviews for RAG, agentic and cloud-based AI systems</li>
+          <li> Tailored Workshops & Expert Sessions
+            <p>
+              Focused technical sessions on Generative AI, RAG, agentic systems, NLP, AI evaluation and production AI engineering.
+            </p>
+          </li>
           <li>Second opinions on AI system design, harnesses and technology choices</li>
           <li>AI and Agentic Workflow Evaluations and observability reviews</li>
           <li>Co Supervision of master's theses</li>
@@ -390,8 +428,7 @@
       <div>
         <h3>Get in touch</h3>
         <p>
-          If you would like an independent technical perspective on an AI
-          system or project, feel free to contact me.
+          Have a project or workshop in mind? Get in touch
         </p>
       </div>
 
@@ -498,9 +535,11 @@
     </div>
   </section>
 
+  
+
   <section id="about" class="section container">
     <div class="section-heading">
-      <span>06</span>
+      <span>07</span>
       <h2>About</h2>
     </div>
 
@@ -527,15 +566,27 @@
         My work combines machine learning and NLP with backend
         engineering, cloud infrastructure and system architecture.
       </p>
-
-      <p>
-        My background is in AI/ NLP/ Computer Science/Data Science.  
-      </p>
       
       <p>
       When I am not working, I am being a <strong>mum</strong> to a curious child. 
       </p>
 
+    </div>
+  </section>
+
+  <section class="education-section container">
+    <div class="section-heading">
+      <span>06</span>
+      <h2>Education</h2>
+    </div>
+
+    <div class="education-list">
+      {#each education as item}
+        <article>
+          <h3>{item.institution}</h3>
+          <p>{item.degree} · {item.field} · {item.year}</p>
+        </article>
+      {/each}
     </div>
   </section>
 
@@ -555,6 +606,9 @@
       </a>
       <a href={linkedin} target="_blank" rel="noreferrer">
         LinkedIn
+      </a>
+      <a href={email}>
+        Email
       </a>
     </div>
 
